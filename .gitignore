@@ -63,3 +63,4 @@ typings/
 .gitignore
 .idea/
 dist/
+.DS_Store
