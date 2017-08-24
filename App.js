@@ -1,13 +1,14 @@
 import React from 'react';
-import {randomPosition} from './HighOrderComponent'
+import {randomPosition, fadeIn} from './HighOrderComponent'
 
 const image = (props)=> {
     return(
-        <img src="./baoman.jpeg" />
+        <img style={props.style}
+             src="./baoman.jpg" />
     )
 };
 
-const AppImage = randomPosition(image);
+const AppImage = fadeIn(randomPosition(image));
 
 export default class App extends React.Component{
     constructor(props){
@@ -34,6 +35,7 @@ export default class App extends React.Component{
             count: 0
         })
     }
+
 
     render(){
         const images = [];

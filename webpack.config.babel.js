@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin';
 import path from 'path';
+import webpack from 'webpack';
 
 module.exports = {
     entry: './index.js',
@@ -47,6 +48,10 @@ module.exports = {
         new ExtractTextWebpackPlugin({
             filename: 'app.css',
             allChunks: true
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
-}
+};
