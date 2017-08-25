@@ -8,7 +8,12 @@ const image = (props)=> {
     )
 };
 
+const text = (props) => {
+    return (<h1 style={props.style}>Hello</h1>);
+};
+
 const AppImage = fadeIn(randomPosition(image));
+//const AppText = fadeIn(randomPosition(text));
 
 export default class App extends React.Component{
     constructor(props){
@@ -39,8 +44,10 @@ export default class App extends React.Component{
 
     render(){
         const images = [];
+        const texts = [];
         for(let i = 0; i < this.state.count ; i++) {
             images.push(<AppImage key={i}/>);
+            //texts.push(<AppText key={i}/>);
         }
         return(
             <div>
