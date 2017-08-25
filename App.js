@@ -1,5 +1,5 @@
 import React from 'react';
-import {randomPosition, fadeIn} from './HighOrderComponent'
+import {randomPosition,fadeIn} from './HighOrderComponent'
 
 const image = (props)=> {
     return(
